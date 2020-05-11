@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+  {% block body_block %}
+    <title>{{article.title}}</title>
+    <h1>We will present News here!</h1>
+    {% for article in articles %}
+    {% if article.type == 'NEWS' %}
+      <h2><a href="{%url 'articles:detail' slug=article.slug %}">{{article.title}}</a></h2>
+      <p>{{article.type}}</p>
+      <p>By {{article.author}}</p>
+      <p>{{article.date}}</p>
+      <img src="{{article.thumb.url}}" alt=""NO IMAGE FOUND">
+      <p>{{article.description}}</p>
+    {% endif %}
+    {% endfor %}
+  {% endblock %}

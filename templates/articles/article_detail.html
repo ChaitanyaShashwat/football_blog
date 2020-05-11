@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+  {% block body_block %}
+    <title>{{article.title}}</title>
+    <h2>{{article.title}}</h2>
+    <p>By {{article.author}}</p>
+    <p>{{article.date}}</p>
+    <img src="{{article.thumb.url}}" alt=""NO IMAGE FOUND">
+    <p>{{article.body}}</p>
+    <p>{{article.date}}</p>
+  {% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+  {% block body_block %}
+    <title>Analysis</title>
+    <h1>We will present Analysis here!</h1>
+    {% for article in articles %}
+    {% if article.type == 'ANALYSIS' %}
+      <p>{{article.type}}</p>
+      <p>{{article.type}}</p>
+      <p>By {{article.author}}</p>
+      <p>{{article.date}}</p>
+      <img src="{{article.thumb.url}}" alt=""NO IMAGE FOUND">
+      <p>{{article.description}}</p>
+    {%endif%}
+    {% endfor %}
+  {% endblock %}
