@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% block body_block %}
-  <h1>Create An Awesome Article</h1>
+  <h1 class="pt-5">WRITE ARTICLE</h1>
+  <hr color="grey">
   <form action="{% url 'articles:create' %}" method="post" enctype='multipart/form-data'>
     {% csrf_token %}
-    {{form}}
+    {{form.as_p}}
     <input type="submit" name="" value="Create">
   </form>
 {% endblock %}
