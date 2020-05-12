@@ -1,16 +1,27 @@
-
 {% extends "base.html" %}
   {% block body_block %}
     <title>{{article.title}}</title>
-    <h1>We will present News here!</h1>
+    <h1 class="mt-5">NEWS</h1>
+    <hr color="grey">
     {% for article in articles %}
     {% if article.type == 'NEWS' %}
-      <h2><a href="{%url 'articles:detail' slug=article.slug %}">{{article.title}}</a></h2>
-      <p>{{article.type}}</p>
-      <p>By {{article.author}}</p>
-      <p>{{article.date}}</p>
-      <img src="{{article.thumb.url}}" alt=""NO IMAGE FOUND">
-      <p>{{article.description}}</p>
+    <div class="card mb-3">
+      <div class="card-body">
+      
+        <h3 class="card-title"><a href="{%url 'articles:detail' slug=article.slug %}">{{article.title}}</a></h3>
+  
+      <div class="card-subtitle mb-1 text-muted">
+        <p>{{article.type}}</p>
+        <p>By {{article.author}}</p>
+        <p>{{article.date}}</p>
+      </div>
+      <div>
+      <img class="card-img-top" src="{{article.thumb.url}}" alt="NO IMAGE FOUND">
+    </div>   
+      <p class="card-text pt-2">{{article.description}}</p>
+    </div>
+  </div>
+
     {% endif %}
     {% endfor %}
   {% endblock %}
