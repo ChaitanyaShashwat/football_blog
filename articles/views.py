@@ -5,6 +5,10 @@ from django.contrib.auth.decorators import login_required
 from . import forms
 
 # Create your views here.
+def articles_home(request):
+    articles = Article.objects.all().order_by('-date')
+    return render(request,'articles/articles_home.html',{'articles':articles})
+
 def news(request):
     articles = Article.objects.all().order_by('-date')
     return render(request,'articles/news.html',{'articles':articles})

@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 
   {% block body_block %}
+  <style>
+    a { color: #000000; }
+    a:hover{color:#000000; text-decoration:none;}
+  </style>
     <h1 class="pt-5">homePage</h1>
     <hr color="grey">
     <div class="row mb-5">
@@ -15,18 +19,23 @@
     <div class="col-9">
     {% for article in articles %}
     {% if forloop.counter < 4 %}
+    <span title="{{article.title}}">
+    <a href="{%url 'articles:detail' slug=article.slug %}">
     <div class="row mt-5">
     <div class="col-6">
-      <h2><a href="{%url 'articles:detail' slug=article.slug %}">{{article.title}}</a></h2>
-      <p>{{article.type}}</p>
-      <p>By {{article.author}}</p>
-      <p>{{article.date}}</p>
-      <p>{{article.description}}</p>
+
+        <h2>{{article.title}}</h2>
+        <p>{{article.type}}</p>
+        <p>By {{article.author}}</p>
+        <p>{{article.date}}</p>
+        <p>{{article.description}}</p>
+      </div>
+      <div class="col-1">
+        <img src="{{article.thumb.url}}" alt="NO IMAGE FOUND" style="width:300px;height:200px">
+      </div>
     </div>
-    <div class="col-1">
-      <img src="{{article.thumb.url}}" alt="NO IMAGE FOUND" style="width:300px;height:200px">
-    </div>
-  </div>
+    </a>
+    </span>
     {% endif %}
     {% endfor %}
   </div>

@@ -2,13 +2,12 @@
   {% block body_block %}
   <style>
      a { color: #000000; }
-     a:hover{color:#000000; text-decoration:none;}
+     a:hover{color:#000000 }
   </style>
     <title>{{article.title}}</title>
-    <h1 class="mt-5">NEWS</h1>
+    <h1 class="mt-5">Articles</h1>
     <hr color="grey">
     {% for article in articles %}
-    {% if article.type == 'NEWS' %}
     <div class="card mb-3">
       <span title="{{article.title}}">
       <a href="{%url 'articles:detail' slug=article.slug %}">
@@ -27,7 +26,5 @@
     </a>
     </span>
   </div>
-
-    {% endif %}
     {% endfor %}
   {% endblock %}
