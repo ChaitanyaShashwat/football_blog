@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block body_block %}
-<h1 class="pt-5">Login</h1>
+<h1 class="pt-5"><img src="{%static "images/logo_3.png"%}" style="width:40px;height:40px" alt="turf"> Login</h1>
 <hr color="grey">
+<h4>Want to write for us?</h4>
+<br>
+<h6 style padding-top:3%>Visit this<a href="{%url 'joinus'%}"> page</a> to enquire.</h6>
+<br>
 <form class="site-form" action={% url 'accounts:login' %} method="post">
   {% csrf_token %}
     {{form.as_p}}
@@ -10,4 +15,8 @@
     {% endif %}
     <input type="submit" name="" value="Login">
 </form>
+<br>
+<br>
+<br>
+<br>
 {% endblock %}
