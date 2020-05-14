@@ -1,16 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
   {% block body_block %}
-  <style>
-    h1{   text-decoration: underline;  } 
-  </style>
-    <h1>Founders</h1>
+   <h1 class="pt-5">FOUNDERS</h1>
+   <hr color="grey">
       <h2 class="pt-5">Vansh Ambashta</h2>
       <div class="row pt-5 mb-5">
       <div class="col-6">
+        <div class="text-muted">
         <br>B.Tech, Mechanical Engineering</br>
         <br>Motilal Nehru National Institute of Technology, Allahabad </br>
-        <p>yahan pe gyaan</p>
+      </div>
       </div>
       <div class="col-6"><img src="{% static 'images/vansh.jpeg' %}" alt="teri photo" style="width:300px;height:300px"></div>
       </div>
@@ -18,10 +17,11 @@
       <h2 class="pt-5">Chaitanya Shashwat</h2>
       <div class="row pt-5 mb-5">
       <div class="col-6">
+        <div class="text-muted">
         <br>B.Tech, Civil Engineering</br>
         <br>National Institute of Technology Surathkal </br>
       </div>
+      </div>
       <div class="col-6"><img src="{% static 'images/chetu.jpeg' %}" alt="meri photo" style="width:300px;height:300px"></div>
     </div>
-
 {% endblock %}
