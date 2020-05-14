@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Football Scores, Fixtures & Results | football_blog.com</title>
+  
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    
+
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -21,6 +21,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js">
 
     <style>
+    nav button{
+      background:none;
+      cursor:pointer;
+      border:0;
+      color:rgba(255,255,255,.5);
+    }
+
       #shareButton {
   position: fixed;
   right: 40px;
@@ -219,14 +226,16 @@ function toggleAddThisButtons(button) {
         <a class="nav-item nav-link" href="{% url 'home_page' %}">Home<span class="sr-only">(current)</span></a></li>
       </li>
       <li><a class="nav-item nav-link" href="{% url 'about' %}">About</a></li>
+      <li><a class="nav-item nav-link" href="{% url 'articles:articles_home' %}">Articles</a></li>
       <li><a class="nav-item nav-link" href="{% url 'articles:news' %}">News</a></li>
       <li><a class="nav-item nav-link" href="{% url 'articles:transfers' %}">Transfers</a></li>
-      <a class="nav-item nav-link" href="{% url 'articles:analysis' %}">Analysis</a></li>
+      <li><a class="nav-item nav-link" href="{% url 'articles:analysis' %}">Analysis</a></li>
+      <li><a class="nav-item nav-link" href="{% url 'joinus' %}">Join Us</a></li>
       {% if user.is_authenticated %}
-        <li><a class="nav-item nav-link" href='{% url 'articles:create' %}'>Write for Us</a></li>
+        <li><a class="nav-item nav-link" href='{% url 'articles:create' %}'>Write</a></li>
         <form action="{%url 'accounts:logout' %}" method="post">
           {% csrf_token %}
-          <li class="pt-1"><button type="submit">Log out</button></li>
+          <li class="pt-2"><button type="submit">Log out</button></li>
         </form>
       {% else %}
           <li><a class="nav-item nav-link" href="{% url 'accounts:login' %}">Log-In</a></li>

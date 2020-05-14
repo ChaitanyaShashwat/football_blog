@@ -10,5 +10,8 @@ def home(request):
 def about(request):
     return render(request,'about.html')
 
+def join(request):
+    return render(request,'join_us.html')
+
 def submit(request):
     return render(request,'render.html')

@@ -1,0 +1,39 @@
+a {
+  color: #000000;
+}
+
+a:hover{
+  color:#000000;
+  text-decoration:none;
+}
+
+.chetusocial{
+    padding-left: 5%;
+    /* padding-top: 5% */
+  }
+
+.vanshsocial{
+  padding-left: 5%;
+  padding-top: 5%;
+  }
+
+
+.article_block{
+  background-color:#ebebeb;
+  padding-left: 5%
+
+}
+.article_block:hover{
+  background-color: #e0e0e0;
+}
+
+.see_more{
+  padding-left: 5%;
+  text-align:right;
+  text-decoration:underline;
+
+}
+
+.see_more:hover{
+  background-color: #e0e0e0;
+}

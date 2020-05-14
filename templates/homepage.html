@@ -1,36 +1,33 @@
 {% extends "base.html" %}
-
+{% load static %}
   {% block body_block %}
-  <style>
-    a { color: #000000; }
-    a:hover{color:#000000; text-decoration:none;}
-  </style>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styling.css' %}">
     <h1 class="pt-5">homePage</h1>
     <hr color="grey">
     <div class="row mb-5">
     <div class="col-3">
-      <h4 class="pt-5">Connect with us at</h4>
+      <h4 class="pt-5">Connect with Us</h4>
+      <div class="vanshsocial">
       <h6>VANSH AMBASHTA</h6>
       <a href="https://www.instagram.com/ambashtavansh/" target="_blank"><p><i class="fa fa-instagram" aria-hidden="true"></i> ambashtavansh</p></a>
       <a href="https://www.facebook.com/vansh.ambashta" target="_blank"><p><i class="fa fa-facebook-square" aria-hidden="true"></i> Vansh Ambashta</p></a>
       <a href="https://twitter.com/VanshAmbashta" target="_blank"><p><i class="fa fa-twitter-square" aria-hidden="true"></i> Vansh Ambashta</p></a>
-      
-      
+      </div>
+      <div class="chetusocial">
       <h6 class="pt-4">CHAITANYA SHASHWAT</h6>
       <a href="https://www.instagram.com/i_zultan/" target="_blank"><p><i class="fa fa-instagram" aria-hidden="true"></i> i_zultan</p></a>
       <a href="https://www.facebook.com/chaitanya.shashwat.3" target="_blank"><p><i class="fa fa-facebook-square" aria-hidden="true"></i> Chaitanya Shashwat</p></a>
       <a href="https://twitter.com/ChaitanyaShash5" target="_blank"><p><i class="fa fa-twitter-square" aria-hidden="true"></i> Chaitanya Shashwat</p></a>
+      </div>
     </div>
-    
-
     <div class="col-9">
     {% for article in articles %}
     {% if forloop.counter < 4 %}
+    <div class="article_block">
     <span title="{{article.title}}">
     <a href="{%url 'articles:detail' slug=article.slug %}">
     <div class="row mt-5">
     <div class="col-6">
-
         <h2>{{article.title}}</h2>
         <p>{{article.type}}</p>
         <p>By {{article.author}}</p>
@@ -43,8 +40,16 @@
     </div>
     </a>
     </span>
+    </div>
     {% endif %}
     {% endfor %}
+    <div class="see_more">
+    <div class="row mt-5">
+    <div class="col-6">
+        <a href="{% url 'articles:articles_home' %}"><h4>See All Articles</h4></a>
+      </div>
+    </div>
+    </div>
   </div>
 </div>
   {% endblock %}

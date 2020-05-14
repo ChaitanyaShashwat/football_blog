@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^$',views.home,name='home_page'),
     url(r'^admin/', admin.site.urls),
     url(r'^about',views.about,name='about'),
+    url(r'^joinus',views.join,name='joinus'),
     url(r'^articles/',include('articles.urls')),
     url(r'^accounts/',include('accounts.urls'))
 ]
