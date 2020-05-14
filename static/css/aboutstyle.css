@@ -1,0 +1,24 @@
+#vanshpic{
+align-items: right;
+}
+
+
+h2{
+  padding-top: 5%;
+  border-bottom: 2px solid black;
+}
+
+.chetu{
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-family: 'Patua One', cursive;
+}
+
+.vansh{
+  font-family: 'Patua One', cursive;
+}
+
+p{
+  padding-top: 3%;
+  font-size: 1.5em;
+}

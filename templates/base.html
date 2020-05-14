@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-  
+
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
@@ -21,12 +21,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js">
 
     <style>
-    nav button{
-      background:none;
-      cursor:pointer;
-      border:0;
-      color:rgba(255,255,255,.5);
-    }
+footer{
+  background-color: black;
+  color:white;
+}
+
+nav button{
+background:none;
+cursor:pointer;
+border:0;
+color:rgba(255,255,255,.5);
+}
+
+.copyrightinfo{
+font-size: 0.8em;
+}
 
       #shareButton {
   position: fixed;
@@ -243,11 +252,24 @@ function toggleAddThisButtons(button) {
     </ul>
       </div>
     </nav>
-    <div class="container">
+  <div class="container">
     {% block body_block %}
     {# Anything outside of this will be inherited if you use extend.#}
     {% endblock %}
     </div>
+    <footer>
+<div class= "navbar navbar-inverse navbar-static-bottom" role="navigation">
+  <div class="navbar-text pull-left">
+      &copy; Turf Football
+  </div>
+  <div class="copyrightinfo">
+    <div class= "navbar-text pull-right">
+        All rights reserved. The information contained on this website may not be published, broadcast, rewritten, or redistributed without prior written authority.
+    </div>
+  </div>
+
+</div>
+</footer>
 
   </body>
 </html>
