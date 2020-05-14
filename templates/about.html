@@ -1,41 +1,32 @@
-  {% extends "base.html" %}
-  {% load static %}
-    {% block body_block %}
-    <link rel="stylesheet" href="{%static 'css/aboutstyle.css'%}">
-    <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
-    <h2>OUR MISSION</h2>
-    <p>At Turf Football, we believe in producing the best footballing content for our readers. Our aim is to give you a different perspective on football and cover some of the hidden stories that often go unnoticed. We strive to bring about different opinions from different parts of the world and we dream of creating an impact on society through football. </p>
-    <h2>FOUNDERS</h2>
-    <br>
-    <div class="vansh">
-        <div class="row">
-        <div class="col-6">
-          <br>
-          <br>
-          <h3>Vansh Ambashta</h3>
-          <br>
-          <h5>B.Tech, Mechanical Engineering</h5>
-          <h5>Motilal Nehru National Institute Technology, Allahabad</h5>
-        </div>
-        <div class="col-6">
-          <img src="{% static 'images/vansh.jpeg' %}" id='vanshpic' style="width:300px;height:300px">
-        </div>
-      </div>
-    </div>
+{% extends "base.html" %}
+{% load static %}
+  {% block body_block %}
+<h1 class="pt-5">OUR MISSION</h1>
+   <hr color="grey">
+<p>At Turf Football, we believe in producing the best footballing content for our readers. Our aim is to give you a different perspective on football and cover some of the hidden stories that often go unnoticed. We strive to bring about different opinions from different parts of the world and we dream of creating an impact on society through football.</p>
 
-    <div class="chetu">
-      <div class="row">
-        <div class="col-6">
-          <br>
-          <br>
-          <h3>Chaitanya Shashwat</h3>
-          <br>
-          <h5>B.Tech, Civil Engineering</h5>
-          <h5>National Institute Technology Surathkal</h5>
-        </div>
-        <div class="col-6">
-          <img src="{% static 'images/chetu.jpeg' %}" alt="meri photo" style="width:300px;height:300px">
-        </div>
+
+   <h1 class="pt-5">FOUNDERS</h1>
+   <hr color="grey">
+      <h2 class="pt-3">Vansh Ambashta</h2>
+      <div class="row pt-2 mb-5">
+      <div class="col-6">
+        <div class="text-muted">
+        <br>B.Tech, Mechanical Engineering</br>
+        <br>Motilal Nehru National Institute of Technology, Allahabad </br>
       </div>
+      </div>
+      <div class="col-6"><img src="{% static 'images/vansh.jpeg' %}" alt="teri photo" style="width:300px;height:300px"></div>
+      </div>
+
+      <h2 class="pt-1">Chaitanya Shashwat</h2>
+      <div class="row pt-2 mb-5">
+      <div class="col-6">
+        <div class="text-muted">
+        <br>B.Tech, Civil Engineering</br>
+        <br>National Institute of Technology Surathkal </br>
+      </div>
+      </div>
+      <div class="col-6"><img src="{% static 'images/chetu.jpeg' %}" alt="meri photo" style="width:300px;height:300px"></div>
     </div>
-  {% endblock %}
+{% endblock %}
